@@ -6,7 +6,7 @@ struct ContentView: View {
     @State private var showingAdd = false
     @State private var showingPaywall = false
     @State private var showingSettings = false
-    @State private var editingEntry: Test TileEntry?
+    @State private var editingEntry: TestTileEntry?
 
     var body: some View {
         NavigationStack {
@@ -73,7 +73,7 @@ struct ContentView: View {
 }
 
 struct EntryRow: View {
-    let entry: Test TileEntry
+    let entry: TestTileEntry
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(entry.name)
@@ -154,7 +154,7 @@ struct AddEntrySheet: View {
 struct EditEntrySheet: View {
     @EnvironmentObject var store: Store
     @Environment(\.dismiss) var dismiss
-    @State var entry: Test TileEntry
+    @State var entry: TestTileEntry
 
     var body: some View {
         NavigationStack {
